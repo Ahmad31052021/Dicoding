@@ -65,3 +65,23 @@ nav ul li a:hover {
 }
 
 /* main dan content} */
+
+main {
+  width: 95%;
+  border: solid 2px black;
+  border-top: none;
+  border-bottom: none;
+  margin: auto;
+}
+
+/* foter */
+
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+footer span {
+  color: white;
+}
