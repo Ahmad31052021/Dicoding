@@ -13,6 +13,7 @@ body {
 /* header dan nav */
 header {
   /* border: solid black 1px; */
+  display: inline;
 }
 
 .namaWeb {
@@ -21,16 +22,23 @@ header {
 }
 
 header h1 {
-  font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, Impact,
-    Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   background-color: black;
   color: white;
   display: inline-block;
   padding-right: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 5pxpx;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  .judulWeb {
+    font-size: 30px;
+  }
+}
+
 .mad {
   color: black;
   background-color: yellow;
@@ -39,6 +47,8 @@ header h1 {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   background-color: black;
 }
 
@@ -46,6 +56,12 @@ nav ul li {
   display: inline-block;
   padding: 20px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  nav ul li {
+    padding: 10px;
+  }
 }
 
 nav ul li a {
@@ -64,14 +80,104 @@ nav ul li a:hover {
   color: black;
 }
 
-/* main dan content} */
+/* main dan content, asside */
 
 main {
   width: 95%;
-  border: solid 2px black;
+  /* border: solid 2px black; */
   border-top: none;
   border-bottom: none;
   margin: auto;
+  overflow: auto;
+}
+
+.content {
+  padding: 20px;
+  float: left;
+  width: 75%;
+}
+.content article {
+  padding: 20px;
+  margin: 20px 20px;
+  box-shadow: 5px 5px 20px rgb(178, 180, 175);
+}
+
+.content h1 {
+  text-align: center;
+}
+.content img {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.content article ul {
+  width: 50%;
+  margin: auto;
+  /* background-color: black; */
+  padding: 20px;
+}
+
+.content article ul li a {
+  text-decoration: none;
+}
+
+.css img {
+  width: 260px;
+  height: 260px;
+}
+
+.js img {
+  width: 260px;
+  height: 260px;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding: 20px;
+
+  margin-top: 40px;
+  /* border: solid black 1px; */
+  text-align: center;
+  box-shadow: -5px 5px 20px rgb(178, 180, 175);
+}
+
+@media screen and (max-width: 1000px) {
+  aside article {
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: -5px 5px 20px rgb(178, 180, 175);
+  }
+}
+
+aside h2 {
+  padding: 10px;
+}
+figure {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+aside figure img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px;
+}
+
+aside table tr th,
+td {
+  text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+  .content,
+  aside {
+    width: 100%;
+    padding: 0px;
+  }
 }
 
 /* foter */
